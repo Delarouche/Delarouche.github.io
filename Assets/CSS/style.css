@@ -11,7 +11,7 @@ html {
     margin:0;
     width:100vw;
     height:100%;
-    display:inline-block;
+ 
     font-family:'Source Sans Pro',Helvetica,Arial,sans-serif
     }
     
@@ -25,14 +25,18 @@ html {
     
     
     
-     /*make Responsive Menu apear when not needed*/
+    /*make Responsive Menu apear when not needed*/
     div.Hamburger img {
     height:8vh
     }
     /*make cursor change on menu hover to make it more intuitive*/
     .menu--toggle--text {
-    margin-left:70vw;
-    cursor:pointer
+    cursor:pointer;
+    position:absolute;
+    top:10vh;
+    left:80vw;
+    z-index:3;
+    margin:0;
     }
 
     /*make Responsive Menu apear when clicked*/
@@ -41,27 +45,29 @@ html {
     }
 
     /*make Responsive Menu disapear when clicked again*/
-    .menu--toggle,.menu--body {
+    .menu--toggle,.menu--body{
     display:none
     }
    
     /*position  the responisve menu over the title with position absolute*/
     div.menu--body {
     height:100vh;
-    width:50vw;
+    width:100vw;
     position:absolute;
     top:0;
-    left:25vw;
+    left:0;
     z-index:2;
     margin:0;
     float:left;
     padding-top:10vh;
     font-size:4vw;
-    background-color:rgba(0, 0, 0, 0.815)
+    background-color:rgba(202, 191, 191, 0.856);
+   
     }
     /*height 10vh is used so it fits perfectly with the paralx effect at the beginning, otherwhise there could be a case where one cant see all links in the navbar*/
     div.menu--body div {
-    height:10vh
+   
+    color:#252525;
     }
     
     div.Title {
@@ -168,7 +174,6 @@ html {
     transform-style:preserve-3d;
     height:100vh;
     width:100vw;
-    overflow-y:scroll;
     overflow-x: hidden;
     }
     
@@ -215,7 +220,7 @@ html {
     margin:0
     }
     
-    .ParallaxContainer-information {
+    .ParallaxContainer-track{
     background-color:rgba(153,59,36,0.5);
     background-blend-mode:multiply;
     background-repeat:no-repeat;
@@ -272,25 +277,7 @@ html {
     margin:0
     }
     
-    .ParallaxContainer-track {
-    background-color:rgba(33,161,165,0.671);
-    background-blend-mode:multiply;
-    background-repeat:no-repeat;
-    background-image:url(https://www.nismo.com/wp-content/uploads/2018/06/GT_Sport_Motul_Team_RJN_11_updated.jpg);
-    background-position:bottom;
-    background-size:cover;
-    display:flex;
-    width:100vw;
-    flex:1 0 auto;
-    position:relative;
-    z-index:-1;
-    height:100vh;
-    justify-content:center;
-    align-items:center;
-    transform:translateZ(-1px) scale(2);
-    margin:0
-    }
-   
+    
     .ContentContainer {
     position:relative;
     display:block;
@@ -331,7 +318,7 @@ html {
     right:0;
     top:0;
     bottom:0;
-    text-align:center
+    text-align:center;
     }
     /*margin: 0 (top and bottom) auto defines an always equal left and right margin to center the content grid*/
     div.contentGrid {
@@ -595,7 +582,7 @@ html {
     ::-webkit-scrollbar {
     width:0
     }
-        
+    
        
 
 
@@ -629,7 +616,8 @@ html {
     font-size:7vw;
     border:4px solid #fff;
     text-align:center;
-    height:30vh
+    height:30vh;
+    background-color: rgba(253, 253, 253, 0.158);
     }
     
     div.content-overlay h1 {
@@ -649,7 +637,7 @@ html {
     right:0;
     top:0;
     bottom:0;
-    text-align:center
+    text-align:center;
     }
     /*change background position to better fit new picture ratio*/
     .ParallaxContainer-track {
@@ -868,7 +856,7 @@ html {
     
     #involve-left {
     background-image:url(https://www.formula1.com/content/fom-website/en/championship/inside-f1/rules-regs/2018-season-changes/_jcr_content/articleContent/image_1444839517.img.jpg/1500224725322.jpg);
-    background-position:center;
+    background-position:bottom;
     background-size:cover
     }
     
@@ -902,5 +890,96 @@ html {
     background-size:cover
     }
     }
+  
+
+
+
+
+
+
+
+
+
+    /*responisve navbar design*/
+    #toggle {
+      display: none;
+    }
     
+    /*menu icon overlay*/
+    .hamburger {
+      position: absolute;
+      top: 5em;
+      right: 5%;
+      margin-left: -2em;
+      margin-top: -45px;
+      width: 2em;
+      height: 45px;
+      z-index: 5;
+    }
     
+    .hamburger div {
+      position: relative;
+      right:5vw;
+      width: 3em;
+      height: 7px;
+      border-radius: 3px;
+      background-color: #ffffffd3;
+      margin-top: 8px;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    /** Nav overlay design*/
+  
+    .nav {
+      position: fixed;
+      width: 110vw;
+      height: 100vh;
+      margin: 0;
+      margin-left: -8%;
+      background-color: rgba(226, 226, 240, 0.877);
+     
+      top: -100%; left: 0; right: 0; bottom: 0;
+      overflow: hidden;
+      transition: all 0.1s ease-in-out;
+      transform: scale(0);
+    }
+    .nav-wrapper {
+      position: relative;
+      overflow: hidden;
+      overflow-y: auto;
+      height: 100%;
+    }
+
+    /*link styling*/
+    .nav-wrapper a {
+      font-weight: 800;
+     }
+
+    .nav-wrapper a:link {
+      color: #252525;
+     }
+     .nav-wrapper a:visited {
+      color: #252525;
+     }
+     .nav-wrapper a:hover {
+      color: #636161;
+     }
+    /**Animations for the menu icon**/
+    #toggle:checked + .hamburger .top-bun {
+      transform: rotate(-45deg);
+      margin-top: 25px;
+      background-color: #252525c0;
+    }
+    #toggle:checked + .hamburger .bottom-bun {
+      opacity: 0;
+      transform: rotate(45deg);
+    }
+    #toggle:checked + .hamburger .meat {
+      transform: rotate(45deg);
+      margin-top: -7px;
+      background-color: #252525c0;
+    }
+    #toggle:checked + .hamburger + .nav {
+      top: 0;
+      transform: scale(1);
+    }

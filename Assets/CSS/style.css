@@ -1,26 +1,24 @@
-html {
-  scroll-behavior:smooth
-  }
-  
+/*set the widht of the titel acording to the viewport*/
   div.pageTitle {
   min-width:100vw
   }
   
+  /*set the widht of the body acording to the viewport and define height plus general font family*/
   body {
   margin:0;
   width:100vw;
   height:100%;
   font-family:'Source Sans Pro',Helvetica,Arial,sans-serif
   }
-  
+  /*generaly change links to not be underlined*/
   a:link {
   text-decoration:none
   }
-  
+  /*hide responisve menu for mibile if not needed*/
   .hamburger {
   display:none
   }
-  
+  /*Title picture and overlay layouting*/
   div.Title {
   width:100vh;
   height:100%
@@ -39,10 +37,7 @@ html {
   color:#fff
   }
   
-  div.title-overlay a:link {
-  text-decoration:none
-  }
-  
+  /*use z-index to overlay the text  and position absolute to position the text*/
   div.title-overlay {
   color:#dedede;
   font-weight:700;
@@ -71,7 +66,7 @@ html {
   font-weight:400;
   opacity:.8
   }
-  
+  /*nav menu layouting*/
   div.navGrid {
   margin:0 15%;
   width:70%;
@@ -126,7 +121,7 @@ html {
   width:100vw;
   overflow-x:hidden
   }
-  
+  /*abckground image is defined here, used id so for very background a different css entry is needed, change the id and the background image*/
   .ParallaxContainer-index {
   background-color:rgba(199,87,165,0.63);
   background-blend-mode:multiply;
@@ -221,7 +216,7 @@ html {
   transform:translateZ(-1px) scale(2);
   margin:0
   }
-  
+  /*content layouting*/
   .ContentContainer {
   position:relative;
   display:block;
@@ -278,6 +273,7 @@ html {
   margin:0 auto
   }
   
+  /*content background images  used ids, to add more change id ad background image url*/
   div.content-overlay h1 a:visited {
   text-decoration:none
   }
@@ -295,7 +291,7 @@ html {
   height:100vh;
   overflow-y:scroll
   }
-  
+  /*background image hover effect*/
   #index-left:hover {
   background-image:url(http://images.nintendolife.com/d60a9c09adc4b/mario-kart-8.original.jpg);
   background-size:cover;
@@ -389,7 +385,7 @@ html {
   div.clear {
   clear:both
   }
-  
+  /*footer layouting*/
   footer {
   width:100%;
   height:100%;
@@ -506,12 +502,13 @@ html {
   ::-webkit-scrollbar {
   width:0
   }
-  
+  /*responisve design changes*/
   @media (max-width: 1540px) {
+  /*show responisve menu for mobile devices and shorter widhts*/
   .hamburger {
   display:block
   }
-  
+  /*display content in colum instead of a row, changed widht and height aordingly, width must be 1005 for the content tird*/
   div.content-layout {
   display:inline-block
   }
@@ -673,7 +670,7 @@ html {
   .footer-left div {
   margin:2% 0 2% 2%
   }
-  
+  /*hide the scrollbar for aesthetic effect*/
   ::-webkit-scrollbar {
   width:0
   }
@@ -718,7 +715,7 @@ html {
   div.ParallaxContainer-track {
   background-position:bottom
   }
-  
+  /*make content mobile friendly, removed the hover effect to always display the pictures for moble devices*/
   #index-left {
   background-image:url(http://images.nintendolife.com/d60a9c09adc4b/mario-kart-8.original.jpg);
   background-size:cover;
@@ -810,6 +807,7 @@ html {
   }
   }
   
+  /*hamburgermenue layouting */
   #toggle {
   display:none
   }
@@ -874,7 +872,7 @@ html {
   .nav-wrapper a:hover {
   color:#636161
   }
-  
+  /*animate the menu simbol on beeing checked*/
   #toggle:checked + .hamburger .top-bun {
   transform:rotate(-45deg);
   margin-top:25px;

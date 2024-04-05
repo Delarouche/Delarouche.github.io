@@ -183,7 +183,7 @@
   background-color:rgba(122,101,214,0.781);
   background-blend-mode:multiply;
   background-repeat:no-repeat;
-  background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT50alrEzJzjcqiz7yPPLAsefh_iwvPbpOgamSRV1535A&s);
+  background-image:url(https://api.lemans.org/media/cache/api_news_large/assets/fileuploads/5f/66/5f6693ddbcee6.jpg);
   background-size:cover;
   width:100vw;
   display:flex;
@@ -310,7 +310,7 @@
   }
   
   #start-left:hover {
-  background-image:url(http://rexing.eu/wp-content/uploads/2018/03/Rexing_biokovo_up.jpg);
+  background-image:url(https://api.lemans.org/media/cache/api_news_large/assets/fileuploads/5f/66/5f6693ddbcee6.jpg);
   background-size:cover;
   background-position:center
   }

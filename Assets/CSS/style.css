@@ -379,7 +379,7 @@
   #info-right:hover {
   background-image:url(https://static1.gamespot.com/uploads/original/280/2802776/3124964-wrc6_artwork1_citroen_lefebvre_spain.jpg);
   background-position:center;
-  background-size:cover
+  background-size:center;
   }
   
   div.clear {

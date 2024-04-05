@@ -785,7 +785,7 @@
   #involve-right {
   background-image:url(https://www.godisageek.com/wp-content/uploads/Assetto-Corsa-Competizione-2.png);
   background-position:right;
-  background-size:cover
+  background-size:contain
   }
   
   #info-left {
